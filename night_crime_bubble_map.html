@@ -1,0 +1,584 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_a00e0a37ae3a1f62db37cabb2fc02277 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_a00e0a37ae3a1f62db37cabb2fc02277" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_a00e0a37ae3a1f62db37cabb2fc02277 = L.map(
+                "map_a00e0a37ae3a1f62db37cabb2fc02277",
+                {
+                    center: [34.05, -118.24],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 10,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_ef6233377d3e3c70191cb02b7d7aa2c6 = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 19,
+  "maxNativeZoom": 19,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_ef6233377d3e3c70191cb02b7d7aa2c6.addTo(map_a00e0a37ae3a1f62db37cabb2fc02277);
+        
+    
+            var circle_marker_74a5b3675cb02fb08ef44aa9c831a42e = L.circleMarker(
+                [33.880481401031766, -117.95872544957079],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 36.5665286812537, "stroke": true, "weight": 3}
+            ).addTo(map_a00e0a37ae3a1f62db37cabb2fc02277);
+        
+    
+        var popup_4e200620ae93e054bb000c0b630fee6d = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_8b4c4a174c30bb8db3f50af565f0ce05 = $(`<div id="html_8b4c4a174c30bb8db3f50af565f0ce05" style="width: 100.0%; height: 100.0%;">         <b>77th Street</b><br>         Night Crimes: 47879         </div>`)[0];
+                popup_4e200620ae93e054bb000c0b630fee6d.setContent(html_8b4c4a174c30bb8db3f50af565f0ce05);
+            
+        
+
+        circle_marker_74a5b3675cb02fb08ef44aa9c831a42e.bindPopup(popup_4e200620ae93e054bb000c0b630fee6d)
+        ;
+
+        
+    
+    
+            var circle_marker_2e079a8bf0b4b9c10fd0c4f2a24eae80 = L.circleMarker(
+                [33.917341359143, -117.79879558308063],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 40.00000000000001, "stroke": true, "weight": 3}
+            ).addTo(map_a00e0a37ae3a1f62db37cabb2fc02277);
+        
+    
+        var popup_a5e3fe8a33bcd0351128c0ee2d3419ac = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_a9e79f7057178ae81df00fc853dbe801 = $(`<div id="html_a9e79f7057178ae81df00fc853dbe801" style="width: 100.0%; height: 100.0%;">         <b>Central</b><br>         Night Crimes: 50782         </div>`)[0];
+                popup_a5e3fe8a33bcd0351128c0ee2d3419ac.setContent(html_a9e79f7057178ae81df00fc853dbe801);
+            
+        
+
+        circle_marker_2e079a8bf0b4b9c10fd0c4f2a24eae80.bindPopup(popup_a5e3fe8a33bcd0351128c0ee2d3419ac)
+        ;
+
+        
+    
+    
+            var circle_marker_b67eeac30f36c42d8d56168fca9d35ea = L.circleMarker(
+                [34.14261628347485, -118.16752742325278],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 16.153755174452986, "stroke": true, "weight": 3}
+            ).addTo(map_a00e0a37ae3a1f62db37cabb2fc02277);
+        
+    
+        var popup_0b6256daebca3702d4188ddec95f0244 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_f948d02d92dd5d06410d67f45b12f21e = $(`<div id="html_f948d02d92dd5d06410d67f45b12f21e" style="width: 100.0%; height: 100.0%;">         <b>Devonshire</b><br>         Night Crimes: 30620         </div>`)[0];
+                popup_0b6256daebca3702d4188ddec95f0244.setContent(html_f948d02d92dd5d06410d67f45b12f21e);
+            
+        
+
+        circle_marker_b67eeac30f36c42d8d56168fca9d35ea.bindPopup(popup_0b6256daebca3702d4188ddec95f0244)
+        ;
+
+        
+    
+    
+            var circle_marker_766b50307425aa74859c686008af592e = L.circleMarker(
+                [34.1504770783334, -118.03824670496125],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10.0, "stroke": true, "weight": 3}
+            ).addTo(map_a00e0a37ae3a1f62db37cabb2fc02277);
+        
+    
+        var popup_ece49ffd4e72f1dcedc39d4911c2a92f = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_41c9d367a59f9cde7ae2c6acbe0c4d55 = $(`<div id="html_41c9d367a59f9cde7ae2c6acbe0c4d55" style="width: 100.0%; height: 100.0%;">         <b>Foothill</b><br>         Night Crimes: 25417         </div>`)[0];
+                popup_ece49ffd4e72f1dcedc39d4911c2a92f.setContent(html_41c9d367a59f9cde7ae2c6acbe0c4d55);
+            
+        
+
+        circle_marker_766b50307425aa74859c686008af592e.bindPopup(popup_ece49ffd4e72f1dcedc39d4911c2a92f)
+        ;
+
+        
+    
+    
+            var circle_marker_e3609179efd8d28d9e141a84f820255c = L.circleMarker(
+                [33.70506007649402, -118.05152840796812],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 17.046717918391487, "stroke": true, "weight": 3}
+            ).addTo(map_a00e0a37ae3a1f62db37cabb2fc02277);
+        
+    
+        var popup_25f34844de2d94a622776688c562ce09 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_a3416d6a8e2cacbcd8386784065450ea = $(`<div id="html_a3416d6a8e2cacbcd8386784065450ea" style="width: 100.0%; height: 100.0%;">         <b>Harbor</b><br>         Night Crimes: 31375         </div>`)[0];
+                popup_25f34844de2d94a622776688c562ce09.setContent(html_a3416d6a8e2cacbcd8386784065450ea);
+            
+        
+
+        circle_marker_e3609179efd8d28d9e141a84f820255c.bindPopup(popup_25f34844de2d94a622776688c562ce09)
+        ;
+
+        
+    
+    
+            var circle_marker_766fdfeaf448bd9dc69176640a61bd36 = L.circleMarker(
+                [33.955178998208574, -117.85858465699533],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 13.609698403311652, "stroke": true, "weight": 3}
+            ).addTo(map_a00e0a37ae3a1f62db37cabb2fc02277);
+        
+    
+        var popup_8b29bfd9572bc73887203f4b19c3a45d = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_985f9c040dbfc70d1dc0002646bcac83 = $(`<div id="html_985f9c040dbfc70d1dc0002646bcac83" style="width: 100.0%; height: 100.0%;">         <b>Hollenbeck</b><br>         Night Crimes: 28469         </div>`)[0];
+                popup_8b29bfd9572bc73887203f4b19c3a45d.setContent(html_985f9c040dbfc70d1dc0002646bcac83);
+            
+        
+
+        circle_marker_766fdfeaf448bd9dc69176640a61bd36.bindPopup(popup_8b29bfd9572bc73887203f4b19c3a45d)
+        ;
+
+        
+    
+    
+            var circle_marker_85e1505d1f4e20da37bae5a8a6ba99e8 = L.circleMarker(
+                [33.827205007809205, -117.38523384237797],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 27.646363098758137, "stroke": true, "weight": 3}
+            ).addTo(map_a00e0a37ae3a1f62db37cabb2fc02277);
+        
+    
+        var popup_d1edd10a0c15f5534c5c0cc9167d3352 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_368546091585973a789b7b1b82233bc7 = $(`<div id="html_368546091585973a789b7b1b82233bc7" style="width: 100.0%; height: 100.0%;">         <b>Hollywood</b><br>         Night Crimes: 40337         </div>`)[0];
+                popup_d1edd10a0c15f5534c5c0cc9167d3352.setContent(html_368546091585973a789b7b1b82233bc7);
+            
+        
+
+        circle_marker_85e1505d1f4e20da37bae5a8a6ba99e8.bindPopup(popup_d1edd10a0c15f5534c5c0cc9167d3352)
+        ;
+
+        
+    
+    
+            var circle_marker_1040b5417c7f0452db4b6e5dc777ebd6 = L.circleMarker(
+                [34.12632633692946, -118.0024043253112],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 15.568302779420462, "stroke": true, "weight": 3}
+            ).addTo(map_a00e0a37ae3a1f62db37cabb2fc02277);
+        
+    
+        var popup_6155fdbfe4019f0886171cf376620534 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_e598e23627f7527919b9d3505abae8af = $(`<div id="html_e598e23627f7527919b9d3505abae8af" style="width: 100.0%; height: 100.0%;">         <b>Mission</b><br>         Night Crimes: 30125         </div>`)[0];
+                popup_6155fdbfe4019f0886171cf376620534.setContent(html_e598e23627f7527919b9d3505abae8af);
+            
+        
+
+        circle_marker_1040b5417c7f0452db4b6e5dc777ebd6.bindPopup(popup_6155fdbfe4019f0886171cf376620534)
+        ;
+
+        
+    
+    
+            var circle_marker_2e16f1f41e0f1fc3d7cc1c05ce8abea0 = L.circleMarker(
+                [34.08797435475305, -118.09550607541158],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 24.48018923713779, "stroke": true, "weight": 3}
+            ).addTo(map_a00e0a37ae3a1f62db37cabb2fc02277);
+        
+    
+        var popup_1cb60a4bc6206239125d5362d8ef6ab7 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_91b01cf3b31c073f2eaf26d9782f40b3 = $(`<div id="html_91b01cf3b31c073f2eaf26d9782f40b3" style="width: 100.0%; height: 100.0%;">         <b>N Hollywood</b><br>         Night Crimes: 37660         </div>`)[0];
+                popup_1cb60a4bc6206239125d5362d8ef6ab7.setContent(html_91b01cf3b31c073f2eaf26d9782f40b3);
+            
+        
+
+        circle_marker_2e16f1f41e0f1fc3d7cc1c05ce8abea0.bindPopup(popup_1cb60a4bc6206239125d5362d8ef6ab7)
+        ;
+
+        
+    
+    
+            var circle_marker_6b7865b1b27b0af82d7f2da74099bca7 = L.circleMarker(
+                [33.92036522317391, -117.95254338724264],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 24.40212891780012, "stroke": true, "weight": 3}
+            ).addTo(map_a00e0a37ae3a1f62db37cabb2fc02277);
+        
+    
+        var popup_c1caef8447f3da8c37418c6d550f957f = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_087d57558b4acc5a923e2be9e5540576 = $(`<div id="html_087d57558b4acc5a923e2be9e5540576" style="width: 100.0%; height: 100.0%;">         <b>Newton</b><br>         Night Crimes: 37594         </div>`)[0];
+                popup_c1caef8447f3da8c37418c6d550f957f.setContent(html_087d57558b4acc5a923e2be9e5540576);
+            
+        
+
+        circle_marker_6b7865b1b27b0af82d7f2da74099bca7.bindPopup(popup_c1caef8447f3da8c37418c6d550f957f)
+        ;
+
+        
+    
+    
+            var circle_marker_c03ea4a289b4bf91f13ad6032a20ee6b = L.circleMarker(
+                [34.05835101181211, -118.0751827061014],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 18.688350088704908, "stroke": true, "weight": 3}
+            ).addTo(map_a00e0a37ae3a1f62db37cabb2fc02277);
+        
+    
+        var popup_703ef19fb63062a096af2b57ead9f059 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_dbf92d690ed24a218a56d0580fe06e9a = $(`<div id="html_dbf92d690ed24a218a56d0580fe06e9a" style="width: 100.0%; height: 100.0%;">         <b>Northeast</b><br>         Night Crimes: 32763         </div>`)[0];
+                popup_703ef19fb63062a096af2b57ead9f059.setContent(html_dbf92d690ed24a218a56d0580fe06e9a);
+            
+        
+
+        circle_marker_c03ea4a289b4bf91f13ad6032a20ee6b.bindPopup(popup_703ef19fb63062a096af2b57ead9f059)
+        ;
+
+        
+    
+    
+            var circle_marker_2e20052b8837fc7260be72ffc9ddea94 = L.circleMarker(
+                [33.94478059584885, -117.89991236490532],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 25.354228267297458, "stroke": true, "weight": 3}
+            ).addTo(map_a00e0a37ae3a1f62db37cabb2fc02277);
+        
+    
+        var popup_c06af1bf0d9a0f12ec6629da47c1abca = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_740291450f3973c1777973d0e78ddf5b = $(`<div id="html_740291450f3973c1777973d0e78ddf5b" style="width: 100.0%; height: 100.0%;">         <b>Olympic</b><br>         Night Crimes: 38399         </div>`)[0];
+                popup_c06af1bf0d9a0f12ec6629da47c1abca.setContent(html_740291450f3973c1777973d0e78ddf5b);
+            
+        
+
+        circle_marker_2e20052b8837fc7260be72ffc9ddea94.bindPopup(popup_c06af1bf0d9a0f12ec6629da47c1abca)
+        ;
+
+        
+    
+    
+            var circle_marker_7508351274223c1fb37b0c691a77ae4e = L.circleMarker(
+                [33.851260845996826, -117.9601898480381],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 32.08515671200473, "stroke": true, "weight": 3}
+            ).addTo(map_a00e0a37ae3a1f62db37cabb2fc02277);
+        
+    
+        var popup_54b24cc650a5c20d5639b2ff3949d663 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_0f4f8aae4372024c42b452bcc255df56 = $(`<div id="html_0f4f8aae4372024c42b452bcc255df56" style="width: 100.0%; height: 100.0%;">         <b>Pacific</b><br>         Night Crimes: 44090         </div>`)[0];
+                popup_54b24cc650a5c20d5639b2ff3949d663.setContent(html_0f4f8aae4372024c42b452bcc255df56);
+            
+        
+
+        circle_marker_7508351274223c1fb37b0c691a77ae4e.bindPopup(popup_54b24cc650a5c20d5639b2ff3949d663)
+        ;
+
+        
+    
+    
+            var circle_marker_90964383dcfa8a2fec7b812a791e3e6b = L.circleMarker(
+                [33.963652105592175, -117.9280467180041],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 21.561206386753398, "stroke": true, "weight": 3}
+            ).addTo(map_a00e0a37ae3a1f62db37cabb2fc02277);
+        
+    
+        var popup_efb9b54c963f3af4e46e1ada036eb6e5 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_ab38822e16e7df2321cab06038d5973f = $(`<div id="html_ab38822e16e7df2321cab06038d5973f" style="width: 100.0%; height: 100.0%;">         <b>Rampart</b><br>         Night Crimes: 35192         </div>`)[0];
+                popup_efb9b54c963f3af4e46e1ada036eb6e5.setContent(html_ab38822e16e7df2321cab06038d5973f);
+            
+        
+
+        circle_marker_90964383dcfa8a2fec7b812a791e3e6b.bindPopup(popup_efb9b54c963f3af4e46e1ada036eb6e5)
+        ;
+
+        
+    
+    
+            var circle_marker_21dac0f87a20402dceef8138e3d8d487 = L.circleMarker(
+                [33.79890417418191, -117.7795829064674],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 25.84033116499113, "stroke": true, "weight": 3}
+            ).addTo(map_a00e0a37ae3a1f62db37cabb2fc02277);
+        
+    
+        var popup_394686fb0e3bdf675cbaf8ec7d40977e = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_349b217def1e0891e44e9cd821ef2c3f = $(`<div id="html_349b217def1e0891e44e9cd821ef2c3f" style="width: 100.0%; height: 100.0%;">         <b>Southeast</b><br>         Night Crimes: 38810         </div>`)[0];
+                popup_394686fb0e3bdf675cbaf8ec7d40977e.setContent(html_349b217def1e0891e44e9cd821ef2c3f);
+            
+        
+
+        circle_marker_21dac0f87a20402dceef8138e3d8d487.bindPopup(popup_394686fb0e3bdf675cbaf8ec7d40977e)
+        ;
+
+        
+    
+    
+            var circle_marker_d01eaea5ac35a0d77b950ceac50a498d = L.circleMarker(
+                [33.96770191675146, -118.13479747036133],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 29.919574216439976, "stroke": true, "weight": 3}
+            ).addTo(map_a00e0a37ae3a1f62db37cabb2fc02277);
+        
+    
+        var popup_802c47085f93e17cc74de3cf9b96a988 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_d61917a9f7a8bbbeeb6b33cad042fbcb = $(`<div id="html_d61917a9f7a8bbbeeb6b33cad042fbcb" style="width: 100.0%; height: 100.0%;">         <b>Southwest</b><br>         Night Crimes: 42259         </div>`)[0];
+                popup_802c47085f93e17cc74de3cf9b96a988.setContent(html_d61917a9f7a8bbbeeb6b33cad042fbcb);
+            
+        
+
+        circle_marker_d01eaea5ac35a0d77b950ceac50a498d.bindPopup(popup_802c47085f93e17cc74de3cf9b96a988)
+        ;
+
+        
+    
+    
+            var circle_marker_0f18d88414c909126b4817a95046f9d9 = L.circleMarker(
+                [34.15878459956922, -118.484815566869],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 16.17977528089888, "stroke": true, "weight": 3}
+            ).addTo(map_a00e0a37ae3a1f62db37cabb2fc02277);
+        
+    
+        var popup_cec3e31a3ad6957bacc37c6f601278df = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_3ddb9bad49b966168b536f444f0f9eb9 = $(`<div id="html_3ddb9bad49b966168b536f444f0f9eb9" style="width: 100.0%; height: 100.0%;">         <b>Topanga</b><br>         Night Crimes: 30642         </div>`)[0];
+                popup_cec3e31a3ad6957bacc37c6f601278df.setContent(html_3ddb9bad49b966168b536f444f0f9eb9);
+            
+        
+
+        circle_marker_0f18d88414c909126b4817a95046f9d9.bindPopup(popup_cec3e31a3ad6957bacc37c6f601278df)
+        ;
+
+        
+    
+    
+            var circle_marker_907fc697ac8f079e7fd585fda232fa92 = L.circleMarker(
+                [34.10204391860356, -118.18182532748374],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 17.95032525133057, "stroke": true, "weight": 3}
+            ).addTo(map_a00e0a37ae3a1f62db37cabb2fc02277);
+        
+    
+        var popup_d8cd7a7b0962a1329f41cff3fa788474 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_578fdfa2f6aea31cac1c758ac6a142ab = $(`<div id="html_578fdfa2f6aea31cac1c758ac6a142ab" style="width: 100.0%; height: 100.0%;">         <b>Van Nuys</b><br>         Night Crimes: 32139         </div>`)[0];
+                popup_d8cd7a7b0962a1329f41cff3fa788474.setContent(html_578fdfa2f6aea31cac1c758ac6a142ab);
+            
+        
+
+        circle_marker_907fc697ac8f079e7fd585fda232fa92.bindPopup(popup_d8cd7a7b0962a1329f41cff3fa788474)
+        ;
+
+        
+    
+    
+            var circle_marker_4ba9c16633d9eeeb9fa5da9c394adfb4 = L.circleMarker(
+                [34.005520245328114, -118.28022573929569],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 21.01360141927853, "stroke": true, "weight": 3}
+            ).addTo(map_a00e0a37ae3a1f62db37cabb2fc02277);
+        
+    
+        var popup_4038e7da60795b02322f8135b22bba9b = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_9875f3e3cb194a5455e171fdf6c680e5 = $(`<div id="html_9875f3e3cb194a5455e171fdf6c680e5" style="width: 100.0%; height: 100.0%;">         <b>West LA</b><br>         Night Crimes: 34729         </div>`)[0];
+                popup_4038e7da60795b02322f8135b22bba9b.setContent(html_9875f3e3cb194a5455e171fdf6c680e5);
+            
+        
+
+        circle_marker_4ba9c16633d9eeeb9fa5da9c394adfb4.bindPopup(popup_4038e7da60795b02322f8135b22bba9b)
+        ;
+
+        
+    
+    
+            var circle_marker_5b1846817e1c521fe8ea2d0c5b232b48 = L.circleMarker(
+                [34.1473677554756, -118.38260029034906],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 17.414547604967474, "stroke": true, "weight": 3}
+            ).addTo(map_a00e0a37ae3a1f62db37cabb2fc02277);
+        
+    
+        var popup_840a2b42bda4284ee0fc2924b92639bc = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_94fdcbf8fd96b62ea46b5db52e495667 = $(`<div id="html_94fdcbf8fd96b62ea46b5db52e495667" style="width: 100.0%; height: 100.0%;">         <b>West Valley</b><br>         Night Crimes: 31686         </div>`)[0];
+                popup_840a2b42bda4284ee0fc2924b92639bc.setContent(html_94fdcbf8fd96b62ea46b5db52e495667);
+            
+        
+
+        circle_marker_5b1846817e1c521fe8ea2d0c5b232b48.bindPopup(popup_840a2b42bda4284ee0fc2924b92639bc)
+        ;
+
+        
+    
+    
+            var circle_marker_797531752fb71c663efa2edbc2b2f1c2 = L.circleMarker(
+                [33.936908188738386, -117.91825022948618],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 22.199881726788885, "stroke": true, "weight": 3}
+            ).addTo(map_a00e0a37ae3a1f62db37cabb2fc02277);
+        
+    
+        var popup_e7c5ad97f554afbc5d2eb596950ede88 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_816aab5d5919d83b8adb1845ad72d652 = $(`<div id="html_816aab5d5919d83b8adb1845ad72d652" style="width: 100.0%; height: 100.0%;">         <b>Wilshire</b><br>         Night Crimes: 35732         </div>`)[0];
+                popup_e7c5ad97f554afbc5d2eb596950ede88.setContent(html_816aab5d5919d83b8adb1845ad72d652);
+            
+        
+
+        circle_marker_797531752fb71c663efa2edbc2b2f1c2.bindPopup(popup_e7c5ad97f554afbc5d2eb596950ede88)
+        ;
+
+        
+    
+</script>
+</html>

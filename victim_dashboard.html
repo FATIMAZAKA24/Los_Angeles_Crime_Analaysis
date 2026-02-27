@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Interactive Victim Profiling Dashboard</title>
+
+<script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+
+<style>
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 20px;
+    background: #1a1a2e;
+    color: #eaeaea;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 40px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+/* Age Cards */
+.card-container {
+    display: flex;
+    gap: 18px;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 40px;
+}
+
+.card {
+    background: linear-gradient(135deg, #2e1a47, #3d2c8d);
+    border-radius: 14px;
+    width: 160px;
+    padding: 18px;
+    text-align: center;
+    cursor: pointer;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.6);
+    transition: 0.3s ease;
+}
+
+.card:hover {
+    transform: scale(1.08);
+    background: linear-gradient(135deg, #3d2c8d, #6851a1);
+}
+
+.card i {
+    font-size: 36px;
+    color: #ffd166;
+    margin-bottom: 8px;
+}
+
+.card span {
+    display: block;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.selected {
+    border: 2px solid #ffd166;
+    transform: scale(1.08);
+}
+
+/* Charts */
+#charts {
+    background: #16213e;
+    padding: 25px;
+    border-radius: 14px;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.7);
+}
+</style>
+</head>
+<body>
+
+<h1>Victim Profiling Dashboard</h1>
+
+<div class="card-container" id="ageCards"></div>
+
+<div id="charts">
+    <div id="crimeChart"></div>
+    <div id="areaChart" style="margin-top:50px;"></div>
+    <div id="hourChart" style="margin-top:50px;"></div>
+</div>
+
+<script>
+
+let profileData = [];
+let hourlyData = [];
+
+const ageIcons = {
+    "Child": "fa-child",
+    "Teen": "fa-user-graduate",
+    "Young Adult": "fa-user",
+    "Adult": "fa-user-tie",
+    "Middle-aged": "fa-user",
+    "Senior": "fa-user-clock",
+    "Elderly": "fa-user-astronaut"
+};
+
+const ageRanges = {
+    "Child": "0-11",
+    "Teen": "12-17",
+    "Young Adult": "18-24",
+    "Adult": "25-34",
+    "Middle-aged": "35-49",
+    "Senior": "50-64",
+    "Elderly": "65+"
+};
+
+Promise.all([
+    fetch('victim_profiles.json').then(r => r.json()),
+    fetch('victim_hourly.json').then(r => r.json())
+]).then(([profile, hourly]) => {
+    profileData = profile;
+    hourlyData = hourly;
+    createAgeCards();
+});
+
+function createAgeCards() {
+    const container = document.getElementById("ageCards");
+
+    Object.keys(ageIcons).forEach(age => {
+        const card = document.createElement("div");
+        card.className = "card";
+        card.innerHTML = `
+            <i class="fa ${ageIcons[age]}"></i>
+            <span>${age}</span>
+            <span>(${ageRanges[age]} yrs)</span>
+        `;
+        card.onclick = () => selectAgeGroup(age, card);
+        container.appendChild(card);
+    });
+}
+
+function selectAgeGroup(age, cardElement) {
+
+    document.querySelectorAll('.card').forEach(c => c.classList.remove('selected'));
+    cardElement.classList.add('selected');
+
+    const filtered = profileData.filter(d => d["Victim Age Group"] === age);
+
+    /* ================== TOP 10 CRIMES ================== */
+    const crimeCounts = {};
+    const crimeMedian = {};
+
+    filtered.forEach(d => {
+        crimeCounts[d["Crm Cd Desc"]] = (crimeCounts[d["Crm Cd Desc"]] || 0) + d.Count;
+        crimeMedian[d["Crm Cd Desc"]] = d.MedianDelay;
+    });
+
+    let crimesArray = Object.keys(crimeCounts).map(crime => ({
+        name: crime,
+        count: crimeCounts[crime],
+        median: crimeMedian[crime]
+    }));
+
+    crimesArray.sort((a,b) => b.count - a.count);
+    crimesArray = crimesArray.slice(0,10);
+
+    const crimeTrace = {
+        x: crimesArray.map(d => d.count),
+        y: crimesArray.map(d => d.name),
+        type: 'bar',
+        orientation: 'h',
+        marker: {
+            color: crimesArray.map(d => d.count),
+            colorscale: [
+                [0, "#5f27cd"],
+                [0.5, "#9b51e0"],
+                [1, "#5f27cd"]
+            ]
+        },
+        hovertext: crimesArray.map(d => `Median Delay: ${d.median} days`),
+        hoverinfo: 'text+x+y'
+    };
+
+    Plotly.newPlot('crimeChart', [crimeTrace], {
+        title: `Top 10 Crimes for ${age}`,
+        paper_bgcolor: '#16213e',
+        plot_bgcolor: '#16213e',
+        font: { color: '#eaeaea' },
+        yaxis: { automargin: true }
+    });
+
+    /* ================== AREA CHART ================== */
+    const areaCounts = {};
+    filtered.forEach(d => {
+        areaCounts[d["AREA NAME"]] = (areaCounts[d["AREA NAME"]] || 0) + d.Count;
+    });
+
+    const areaTrace = {
+        x: Object.keys(areaCounts),
+        y: Object.values(areaCounts),
+        type: 'bar',
+        marker: {
+            color: Object.values(areaCounts),
+            colorscale: [
+                [0, "#0f3460"],
+                [0.5, "#0fbcf9"],
+                [1, "#00d2ff"]
+            ]
+        }
+    };
+
+    Plotly.newPlot('areaChart', [areaTrace], {
+        title: `Crime Frequency by Area`,
+        paper_bgcolor: '#16213e',
+        plot_bgcolor: '#16213e',
+        font: { color: '#eaeaea' }
+    });
+
+    // /* ================== HOUR CHART ================== */
+    // const filteredHour = hourlyData
+    //     .filter(d => d["Victim Age Group"] === age)
+    //     .sort((a,b) => a["Hour Occurred"] - b["Hour Occurred"]);
+
+    // const hourTrace = {
+    //     x: filteredHour.map(d => d["Hour Occurred"]),
+    //     y: filteredHour.map(d => d["Count"]),
+    //     type: 'scatter',
+    //     mode: 'lines+markers',
+    //     line: { width: 3 },
+    //     marker: { size: 7 }
+    // };
+
+    // Plotly.newPlot('hourChart', [hourTrace], {
+    //     title: `Crime Distribution by Hour`,
+    //     paper_bgcolor: '#16213e',
+    //     plot_bgcolor: '#16213e',
+    //     font: { color: '#eaeaea' },
+    //     xaxis: { title: "Hour (0-23)" },
+    //     yaxis: { title: "Crime Count" }
+    // });
+}
+
+</script>
+
+</body>
+</html>
