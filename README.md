@@ -109,9 +109,36 @@ The project answers:
 
 A bubble map visualization was created using LAT and LON coordinates and exported as an interactive .html file.
 
+**🔄 Modular Preprocessing**
 
+The entire cleaning logic was stored in cleaning.py as a reusable function.
 
+Benefits:
+* Reproducibility
+* Maintainability
+* Scalability
 
+Easy integration into ML workflows
 
+**🧩 Skills Demonstrated**
 
+* Exploratory Data Analysis (EDA)
+* Data Cleaning & Transformation
+* Missing Data Strategy
+* Feature Engineering
+* Modular Python Development
+* Geospatial Visualization
+* Analytical Storytelling
+
+**🚀 Future Extensions**
+
+* Predictive modeling
+* Crime forecasting
+* Area clustering
+* Risk scoring models
+
+**✍️ Author**
+
+Fatima Zaka
+Data Analysis Project – 2026
 
