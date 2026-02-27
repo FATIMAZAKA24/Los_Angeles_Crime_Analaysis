@@ -30,23 +30,6 @@ Data includes:
 * Date and time of occurrence
 * Case status
 
-**🏗 Project Architecture**
-
-Los_Angeles_Crime_Analysis/
-│
-├── LA_Crime_Cleaned_Data.py      # Reusable preprocessing pipeline
-├── main_crime_analysis.py        # Main analysis file
-├── crime_bubble_map.py           # Geospatial visualization
-├── victim_profiling.py           # Victim segmentation analysis
-│
-├── outputs/
-│   ├── night_crime_bubble_map.html
-│   ├── victim_hourly.json
-│   ├── victim_dashboard.html
-│   ├── victim_profiles.json
-│
-└── README.md
-
 **🧹 Data Cleaning & Preprocessing Strategy**
 
 Raw datasets are rarely analysis-ready. Significant preprocessing was performed:
