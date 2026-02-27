@@ -125,3 +125,9 @@ Easy integration into ML workflows
 Fatima Zaka
 Data Analysis Project – 2026
 
+**Medium Articles**
+For a deep dive into my process and learnings, check out my 2-part series on Medium:
+
+Part 1: From Messy Data to Modular Pipelines
+
+Part 2: Mapping the Pulse of LA — Insights & Visualization
